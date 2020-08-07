@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <laraberg-editor v-model="html"/>
+
+    <pre>
+      {{ html }}
+    </pre>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Vue from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default  {
+    name: 'App',
+    data: () => ({
+      html: `
+        <!-- wp:heading -->
+        <h2>Welcome</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Tell us a story ...</p>
+        <!-- /wp:paragraph -->
+      `
+	}),
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

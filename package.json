@@ -8,9 +8,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "laraberg-vue": "^1.0.0",
+    "react": "^16.13.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "vue-template-compiler": "^2.6.11"
